@@ -25,6 +25,10 @@ h1, h2, h3, h4, h5 {
 .header_2 {
     font-size: 38px;
 }
+.header_3 {
+    font-size: 63px;
+    
+}
 
 .center_text {
     text-align: center;

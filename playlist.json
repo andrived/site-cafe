@@ -1,5 +1,11 @@
 [
+
     {
+        "title": "La Femme d'Argent",
+        "artist": "Air",
+        "file": "music/AIR - La femme d'Argent.mp3",
+        "cover": "covers/air.jpg"
+    },    {
         "title": "Outro Grünt",
         "artist": "Wallace Cleaver",
         "file": "music/wallace-cleaver-grunt.mp3",
@@ -10,11 +16,5 @@
         "artist": "BEN plg",
         "file": "music/Dire je taime.mp3",
         "cover": "covers/ben-plg.jpg"
-    },
-    {
-        "title": "La Femme d'Argent",
-        "artist": "Air",
-        "file": "music/AIR - La femme d'Argent.mp3",
-        "cover": "covers/air.jpg"
     }
 ]

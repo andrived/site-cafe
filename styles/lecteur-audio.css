@@ -36,7 +36,7 @@
   border: 0;
   border-radius: 10px 0 0 10px;
 
-  background: #111;
+  background: #FFB27F;
   color: white;
 
   cursor: pointer;
@@ -51,10 +51,10 @@
 }
 
 .player-tab:hover {
-  background: #222;
+  background: #FFA800;
 }
 
-/* apparence du */
+/* apparence du lecteur */
 
 .player-card {
   width: 430px;
@@ -62,7 +62,7 @@
 
   display: flex;
 
-  background: rgba(255,255,255,.97);
+  background: rgba(250, 250, 250, 0.97);
   border: 1px solid #ddd;
   border-right: 0;
 

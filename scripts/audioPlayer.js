@@ -22,7 +22,7 @@ const trackcounter = document.getElementById('trackcounter');
 let playlist = []
 let currentTrack = 0;
 
-/* Charge la playlist depuis JSON */
+/* charge la playlist depuis JSON */
 async function loadPlaylist() {
   try {
     const response = await fetch("playlist.json");
@@ -47,7 +47,7 @@ async function loadPlaylist() {
   }
 }
 
-/* Charge un morceau dans le lecteur */
+/* charge un morceau dans le lecteur */
 function loadTrack(index, autoplay = false) {
     if(!playlist.length) return;
 
@@ -57,7 +57,7 @@ const track = playlist[currentTrack];
 
 audio.src= track.files;
 
-trackTitle.trackContent = track.title || "Titre inconnu";
+trackTitle.textContent = track.title || "Titre inconnu";
 trackArtist.textContent = track.artist || "Artiste inconnu";
 
 if(track.cover) {
@@ -76,3 +76,87 @@ trackcounter.textContent = `${currentTrack + 1} / ${playlist.length}`;
         audio.play().catch(() => {})
     }
 }
+
+/* jouer ou mettre en pause le morceau */
+
+playbtn.addEventListener("click", () => {
+    if (audio.paused) {
+        audio.play().catch(() => {});
+    } else {
+        audio.pause();
+    }
+});
+
+audio.addEventListener("play", () => {
+    playbtn.textContent = "⏸️";
+});
+
+audio.addEventListener("pause", () => {
+    playbtn.textContent = "▶️";
+});
+
+/* passer au morceau suivant */
+nextbtn.addEventListener("click", () => {
+    loadTrack(currentTrack + 1, true);
+});
+
+/* aller au morceau précédent */
+prevbtn.addEventListener("click", () => {
+    loadTrack(currentTrack - 1, true);
+})
+
+/* passe automatiquement au morceau suivant à la fin du morceau inital */
+audio.addEventListener("ended", () => {
+    loadTrack(currentTrack + 1, true);
+})
+
+/* progression du morceau */
+audio.addEventListener("loadmetadata", () => {
+    duration.textContent = formatTime(audio.duration);
+});
+
+audio.addEventListener("timeupdate", () => {
+    if (!audio.duration) return;
+    progress.value = (audio.currentTime / audio.duration) * 100;
+    currentTime.textContent = formatTime(audio.currentTime);
+});
+
+progress.addEventListener("input", () => {
+    if (!audio.duration) return;
+    audio.currentTime = (progress.value / 100)
+});
+
+/* niveau du volume */
+volume.addEventListener("input", () => {
+    audio.volume = Number(volume.value);
+});
+audio.volume = 1;
+
+/* ouvrir et fermer le lecteur audio */
+playerTab.addEventListener("click",() => {
+    player.classList.toggle("is-hidden");
+
+    const hidden = player.classList.contains("is-hidden");
+
+    if(hidden) {
+        tabIcon.textContent = "<";
+        playerTab.setAttribute("aria-label", "ouvrir le lecteur audio");
+    } else {
+        tabIcon.textContent = ">";
+        playerTab.setAttribute("aria-label", "fermer le lecteur audio");
+    }
+});
+
+/* temps de lecture */
+
+function formatTime(seconds) {
+    if (!Number.isFinite(seconds)) {
+        return "0:00";
+    }
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${minutes}:${String(secs).padStart(2, "0")}`;
+}
+
+/* initialisation */
+loadPlaylist();

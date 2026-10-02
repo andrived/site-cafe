@@ -21,11 +21,9 @@ const trackCounter = document.getElementById("trackCounter");
 
 let playlist = [];
 let currentTrack = 0;
-const INITIAL_VOLUME = 0.1;
+const INITIAL_VOLUME = 0.05;
 
-/* =========================
-   CHARGER LA PLAYLIST
-   ========================= */
+/* charger la playlist */
 
 async function loadPlaylist() {
   try {
@@ -51,9 +49,7 @@ async function loadPlaylist() {
   }
 }
 
-/* =========================
-   CHARGER UN MORCEAU
-   ========================= */
+/* charger un audio */
 
 function loadTrack(index, autoplay = false) {
   if (!playlist.length) return;
@@ -70,7 +66,7 @@ function loadTrack(index, autoplay = false) {
   if (track.cover) {
     cover.src = track.cover;
   } else {
-    cover.src = "covers/default.svg";
+    cover.src = "covers/wai.jpg";
   }
 
   trackCounter.textContent =
@@ -90,9 +86,7 @@ function loadTrack(index, autoplay = false) {
   }
 }
 
-/* =========================
-   PLAY / PAUSE
-   ========================= */
+/* audio joué et mis en pause */
 
 playBtn.addEventListener("click", () => {
   if (audio.paused) {
@@ -112,9 +106,7 @@ audio.addEventListener("pause", () => {
   playBtn.textContent = "▶";
 });
 
-/* =========================
-   PRECEDENT / SUIVANT
-   ========================= */
+/* audio précédente et suivante */
 
 prevBtn.addEventListener("click", () => {
   loadTrack(currentTrack - 1, true);
@@ -124,15 +116,13 @@ nextBtn.addEventListener("click", () => {
   loadTrack(currentTrack + 1, true);
 });
 
-/* Passe automatiquement au morceau suivant */
+/* passe automatiquement au morceau suivant */
 
 audio.addEventListener("ended", () => {
   loadTrack(currentTrack + 1, true);
 });
 
-/* =========================
-   PROGRESSION
-   ========================= */
+/* progression de la musique */
 
 audio.addEventListener("loadedmetadata", () => {
   if (Number.isFinite(audio.duration)) {
@@ -157,9 +147,7 @@ progress.addEventListener("input", () => {
     (progress.value / 100) * audio.duration;
 });
 
-/* =========================
-   VOLUME
-   ========================= */
+/* contrôle du volume */
 
 volume.addEventListener("input", () => {
   audio.volume = Number(volume.value);
@@ -168,9 +156,7 @@ volume.addEventListener("input", () => {
 audio.volume = INITIAL_VOLUME;
 volume.value = String(INITIAL_VOLUME);
 
-/* =========================
-   LANGUETTE
-   ========================= */
+/* la languette/onglet */
 
 playerTab.addEventListener("click", () => {
   player.classList.toggle("is-hidden");
@@ -192,9 +178,7 @@ playerTab.addEventListener("click", () => {
   }
 });
 
-/* =========================
-   FORMAT DU TEMPS
-   ========================= */
+/* la durée de la musique */
 
 function formatTime(seconds) {
   if (!Number.isFinite(seconds)) {
@@ -207,8 +191,6 @@ function formatTime(seconds) {
   return `${minutes}:${String(secs).padStart(2, "0")}`;
 }
 
-/* =========================
-   DEMARRAGE
-   ========================= */
+/* initialisation de la playlist */
 
 loadPlaylist();

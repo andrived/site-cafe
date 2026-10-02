@@ -10,5 +10,11 @@
         "artist": "BEN plg",
         "file": "music/Dire je taime.mp3",
         "cover": "covers/ben-plg.jpg"
+    },
+    {
+        "title": "La Femme d'Argent",
+        "artist": "Air",
+        "file": "music/AIR - La femme d'Argent.mp3",
+        "cover": "covers/air.jpg"
     }
 ]

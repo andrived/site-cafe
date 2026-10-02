@@ -45,9 +45,7 @@ h1, h2, h3, h4, h5 {
 }
 
 
-/* =========================
-   HERO
-   ========================= */
+/* hero */
 
 .hero {
     width: 100%;
@@ -64,9 +62,7 @@ h1, h2, h3, h4, h5 {
 }
 
 
-/* =========================
-   MENU DE NAVIGATION
-   ========================= */
+/* le menu de navigation */
 
 nav {
     display: flex;
@@ -81,14 +77,14 @@ nav {
 }
 
 
-/* Logo principal */
+/* logo principal */
 
 nav .logo {
     width: 60px;
 }
 
 
-/* Liens */
+/* liens */
 
 nav ul {
     display: flex;
@@ -115,9 +111,7 @@ nav ul li a:hover {
 }
 
 
-/* =========================
-   CONTENU HERO
-   ========================= */
+/* contenu hero */
 
 .content {
     text-align: center;
@@ -142,9 +136,7 @@ nav ul li a:hover {
 }
 
 
-/* =========================
-   VIDÉO DE FOND
-   ========================= */
+/* vidéo de fond */
 
 .back-video {
     position: absolute;
@@ -181,7 +173,7 @@ nav ul li a:hover {
 }
 
 
-/* Chaque café */
+/* chaque café */
 
 .location {
     padding: 30px;
@@ -200,7 +192,7 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-/* FOOTER */
+/* footer */
 
 footer {
     text-align: center;

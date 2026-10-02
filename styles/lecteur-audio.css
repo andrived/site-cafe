@@ -5,7 +5,7 @@
 .audio-player {
   position: fixed;
   right: 0;
-  top: 80%;
+  top: 90%;
   z-index: 9999;
   transform: translateY(-50%);
   display: flex;
@@ -54,9 +54,7 @@
   background: #222;
 }
 
-/* =========================
-   CARTE DU LECTEUR
-   ========================= */
+/* apparence du */
 
 .player-card {
   width: 430px;
@@ -75,7 +73,7 @@
   box-shadow: -5px 5px 25px rgba(0,0,0,.18);
 }
 
-/* Pochette */
+/* apparence de la pochette */
 
 .cover-wrapper {
   width: 118px;
@@ -99,7 +97,7 @@
   padding: 13px 14px 10px;
 }
 
-/* Informations */
+/* informations des musiques */
 
 .track-info {
   min-width: 0;
@@ -119,12 +117,12 @@
 }
 
 .track-artist {
-  margin-top: 2px;
+  margin-top: px;
   font-size: 13px;
   color: #777;
 }
 
-/* Boutons */
+/* apparences des boutons */
 
 .controls {
   display: flex;
@@ -165,7 +163,7 @@
   transform: scale(1.06);
 }
 
-/* Barre de progression */
+/* barre de progression */
 
 .progress-row {
   display: flex;
@@ -182,7 +180,7 @@
   cursor: pointer;
 }
 
-/* Ligne du bas */
+/* (bis) lignes volume, boutons et progression */
 
 .bottom-row {
   display: flex;
@@ -208,9 +206,7 @@
   color: #888;
 }
 
-/* =========================
-   MOBILE
-   ========================= */
+/* test pour les téléphones */
 
 @media (max-width: 600px) {
   .player-card {

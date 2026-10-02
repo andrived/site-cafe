@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
+  color: #111;
+}
+
+/* structure du lecteur audio */
+.audio-player {
+    position: fixed;
+    right: 0;
+    top: 80%;
+    z-index: 1000;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+/* audio caché, mais languette visible */
+.audio-player.is-hidden {
+    transform: translateY(100%, -50%);
+}
+
+/* style de la languette */
+.player-tab {
+    position: absolute;
+    left: -34px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 74px;
+    border: 0;
+    border-radius: 10px 0 0 10px;
+    background-color:#111;
+    color: white;
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -3px 3px 15px rgba(0,0,0,.18);
+}
+
+.player-tab:hover {
+    background-color: #222;
+}
+
+/* style de la carte du lecteur */
+.player-card {
+    width: 430px;
+    min-height: 118px;
+    display: flex;
+    background: rgba(255,255,255,.97);
+    border: 1px solid #ddd;
+    border-right: 0;
+    border-radius: 14px 0 0 14px;
+    overflow: hidden;
+    box-shadow: -5px 5px 25px rgba(0,0,0,.18);
+}
+
+/* pochette du lecteur */
+.cover-wrapper {
+    width: 118px;
+    height: 118px;
+    flex-shrink: 0;
+    background: #ddd;
+}
+
+.cover-wrapper img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit:cover;
+}
+
+/* partie droite */
+.player-main {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 14px 10px;
+}
+
+/* infos du morceau */
+.track-info {
+    min-width: 0;
+    margin-bottom: 5px;
+}
+
+.track-title, .track-artist {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.track-title {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.track-artist {
+    margin-top: 2px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* boutons du lecteur */
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin: 4px 0;
+}
+
+.control-btn {
+    width: 29px;
+    height: 29px;
+    font-size: 15px;
+    color: #333;
+}
+
+.play-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #111;
+    color: white;
+    font-size: 13px;
+}
+
+.control-btn:hover {
+    color: #000;
+}
+
+.play-btn:hover {
+    transform: scale(1.06);
+}
+
+/* barre de progression */
+.progress-row {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 10px;
+    color: #777;
+}
+
+#progress {
+    flex: 1;
+    min-width: 0;
+    accent-color: #111;
+    cursor: pointer;
+}
+
+/* ligne du bas */
+
+.bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2px;
+}
+
+#volume {
+    width: 65px;
+    accent-color: #111;
+    cursor: pointer;
+}
+
+.track-counter {
+    font-size: 10px;
+    color: #888;
+}
+
+

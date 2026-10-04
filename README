@@ -1,0 +1,4 @@
+todolist askip: 
+
+    moji: ✅, ❌ et 🔄 (status d'avancement)
+    ❌ rajoute: quand on clique sur l’emoji ‘🔊’, le son ce mute avec emoji ‘🔇’ et quand on réappuie, il se remet à l’ancien % du son et remet emoji '🔊'.

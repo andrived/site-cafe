@@ -1,20 +1,31 @@
 [
-
     {
-        "title": "La Femme d'Argent",
-        "artist": "Air",
-        "file": "music/AIR - La femme d'Argent.mp3",
-        "cover": "covers/air.jpg"
+        "title": "LA VARRRRRRRRRRRRRRR",
+        "artist": "Supremnova",
+        "file": "music/LA VAR.mp3",
+        "cover": "covers/supremnova.jpg"
     },    {
-        "title": "Outro Grünt",
-        "artist": "Wallace Cleaver",
-        "file": "music/wallace-cleaver-grunt.mp3",
-        "cover": "covers/wallace-cleaver.jpg"
+        "title": "EH MATUIDI CHAROOO IHH",
+        "artist": "Niska br br",
+        "file": "music/Niska - Matuidi Charo.mp3",
+        "cover": "covers/niska.jpg"
     },
     {
-        "title": "Dire je t'aime",
-        "artist": "BEN plg",
-        "file": "music/Dire je taime.mp3",
-        "cover": "covers/ben-plg.jpg"
+        "title": "Le Monde ou Rien",
+        "artist": "PNL",
+        "file": "music/PNL - Le Monde ou Rien.mp3",
+        "cover": "covers/pnl.jpg"
+    },
+    {
+        "title": "OH QUARTIER C'EST LA HESS",
+        "artist": "Tiakola et la compagnie",
+        "file": "music/Okclh.mp3",
+        "cover": "covers/4keus.jpg"
+    },
+    {
+        "title": "Kalash 🫰",
+        "artist": "Booba et Kaaris",
+        "file": "music/Kalash.mp3",
+        "cover": "covers/boobakaaris.jpg"
     }
 ]

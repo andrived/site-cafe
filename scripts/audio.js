@@ -21,7 +21,20 @@ const trackCounter = document.getElementById("trackCounter");
 
 let playlist = [];
 let currentTrack = 0;
-const INITIAL_VOLUME = 0.05;
+const INITIAL_VOLUME = 0.05; /* son par défaut */
+
+/* chargement aléatoire de la musique */
+
+function shufflePlaylist(tracks) {
+  const shuffled = [...tracks];
+
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i +1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+
+  return shuffled;
+}
 
 /* charger la playlist */
 
@@ -33,7 +46,7 @@ async function loadPlaylist() {
       throw new Error("Impossible de charger playlist.json");
     }
 
-    playlist = await response.json();
+    playlist = shufflePlaylist(await response.json());
 
     if (!Array.isArray(playlist) || playlist.length === 0) {
       throw new Error("La playlist est vide.");

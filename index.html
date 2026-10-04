@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles/style.css" rel="stylesheet"/>
     <link href="styles/lecteur-audio.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Accueil - Le Café Sodium</title>
     <link rel="icon" type="image/png" href="img/So.png">
 </head>
 <body>
 
-<!-- structure lecteur audio -->
+<!-- structure du lecteur audio -->
   <div class="audio-player" id="audioPlayer">
 
     <button class="player-tab" id="playerTab" type="button"
@@ -61,14 +63,20 @@
 
   <script src="scripts/audio.js" defer></script>
 
-    <!-- structure page d'accueil -->
+    <!-- vidéo de fond de page -->
+    <div class="hero">
 
-<div class="hero">
-
-    <video autoplay loop muted plays-inline class="back-video">
+    <video autoplay loop muted plays-inline class="back-video", id="video">
         <source src="img/Kávé összefoglaló - marketing videó.mp4" type="video/mp4">
     </video>
 
+        <!-- bouton pause/play pour vidéo -->
+    <button class="btn btn-secondary", id="btn-video">
+        <i class="fa fa-pause" aria-hidden="true"></i>
+    </button>
+    <script src="/scripts/pauseplay.js"></script>
+    
+    <!-- barre de navigation -->
     <nav>
         <a href="index.html">
             <img src="./img/So.png" alt="Logo Sodium" class="logo">
@@ -88,13 +96,15 @@
     </div>
 </div>
 
-<section id="cafes" class="location_section center_text ptb_1">
+    <!-- texte avec slogan du café -->
+    <section id="cafes" class="location_section center_text ptb_1">
 
     <p class="location_section_top_text">
         <bold>CAFÉ SODIUM</bold>
         <br> Une dose de caractère
     </p>
 
+    <!-- header avec les différents cafés -->
     <h2 class="header_1">NOS CLASSIQUES</h2>
 
     <div class="locations">
@@ -103,8 +113,7 @@
             <img src="img/cappucino.jpg" alt="Café Sodium">
             <h3 class="header_2">Café Cappuccino</h3>
             <p class="location_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nobis, laborum?
+                Soyez indulgent c'est mon premier site mdrr
             </p>
         </div>
 
@@ -160,7 +169,7 @@
 
     </nav>
     <footer>
-        <p>© 2026 Café Sodium, Tous droits réservés</p>
+        <p>© 2026 Café Sodium, Tous droits réservés, fait par Andrieu</p>
     </footer>
 
     

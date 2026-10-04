@@ -6,7 +6,7 @@
         "cover": "covers/supremnova.jpg"
     },    {
         "title": "EH MATUIDI CHAROOO IHH",
-        "artist": "Niska br br",
+        "artist": "Niska tchiki brrr",
         "file": "music/Niska - Matuidi Charo.mp3",
         "cover": "covers/niska.jpg"
     },
@@ -27,5 +27,11 @@
         "artist": "Booba et Kaaris",
         "file": "music/Kalash.mp3",
         "cover": "covers/boobakaaris.jpg"
+    },
+    {
+        "title": "Dire je t'aime (masterclass la zik)",
+        "artist": "BEN plg 🐐",
+        "file": "music/Dire je taime.mp3",
+        "cover": "covers/ben-plg.jpg"
     }
 ]

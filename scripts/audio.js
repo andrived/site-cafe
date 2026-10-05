@@ -21,7 +21,7 @@ const trackCounter = document.getElementById("trackCounter");
 
 let playlist = [];
 let currentTrack = 0;
-const INITIAL_VOLUME = 0.05; /* son par défaut */
+const INITIAL_VOLUME = 0.00; /* son par défaut */
 
 /* chargement aléatoire de la musique */
 

@@ -185,21 +185,26 @@ nav ul li a:hover {
 }
 
 .location_text {
-    padding-top: 5px;
+    padding-top: 2px;
 }
 
 .location img {
-    width: 50;
+    width: 50%;
     height: 250px;
     object-fit: cover;
     border-radius: 10px;
     display: block;
     margin-bottom: 20px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+.location img:hover {
+    transform: scale(1.05);
 }
 
 /* footer */
 footer {
-    text-align: center;
-    padding: 30px;
+    text-align: left;
+    padding: 15px;
     background-color: #f1ebe0;
 }

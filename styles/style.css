@@ -185,7 +185,7 @@ nav ul li a:hover {
 }
 
 .location_text {
-    padding-top: 2px;
+    padding-top: 0.1px;
 }
 
 .location img {
@@ -204,7 +204,7 @@ nav ul li a:hover {
 
 /* footer */
 footer {
-    text-align: left;
-    padding: 15px;
+    text-align: center;
+    padding: 10px;
     background-color: #f1ebe0;
 }

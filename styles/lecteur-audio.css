@@ -1,6 +1,4 @@
-/* =========================
-   LECTEUR
-   ========================= */
+/* lecteur */
 
 .audio-player {
   position: fixed;
@@ -13,16 +11,12 @@
   transition: transform 0.4s cubic-bezier(.4,0,.2,1);
 }
 
-/* Etat caché :
-   le lecteur sort vers la droite,
-   mais la languette reste visible. */
+/* lecteur (en mode caché) */
 .audio-player.is-hidden {
   transform: translate(100%, -50%);
 }
 
-/* =========================
-   LANGUETTE
-   ========================= */
+/* la languette du lecteur*/
 
 .player-tab {
   position: absolute;
@@ -74,7 +68,6 @@
 }
 
 /* apparence de la pochette */
-
 .cover-wrapper {
   width: 118px;
   height: 118px;
@@ -98,7 +91,6 @@
 }
 
 /* informations des musiques */
-
 .track-info {
   min-width: 0;
   margin-bottom: 5px;
@@ -115,7 +107,6 @@
   font-size: 16px;
   font-weight: 700;
 }
-
 .track-artist {
   margin-top: px;
   font-size: 13px;
@@ -123,7 +114,6 @@
 }
 
 /* apparences des boutons */
-
 .controls {
   display: flex;
   align-items: center;
@@ -164,7 +154,6 @@
 }
 
 /* barre de progression */
-
 .progress-row {
   display: flex;
   align-items: center;
@@ -181,7 +170,6 @@
 }
 
 /* (bis) lignes volume, boutons et progression */
-
 .bottom-row {
   display: flex;
   justify-content: space-between;
@@ -207,7 +195,6 @@
 }
 
 /* test pour les téléphones */
-
 @media (max-width: 600px) {
   .player-card {
     width: min(360px, calc(100vw - 20px));

@@ -86,6 +86,7 @@ function loadTrack(index, autoplay = false) {
     `${currentTrack + 1} / ${playlist.length}`;
 
   progress.value = 0;
+  progress.style.setProperty("--progress", "0%");
   currentTime.textContent = "0:00";
   duration.textContent = "0:00";
 
@@ -148,6 +149,7 @@ audio.addEventListener("timeupdate", () => {
 
   progress.value =
     (audio.currentTime / audio.duration) * 100;
+  progress.style.setProperty("--progress", `${progress.value}%`);
 
   currentTime.textContent =
     formatTime(audio.currentTime);
@@ -156,6 +158,7 @@ audio.addEventListener("timeupdate", () => {
 progress.addEventListener("input", () => {
   if (!audio.duration) return;
 
+  progress.style.setProperty("--progress", `${progress.value}%`);
   audio.currentTime =
     (progress.value / 100) * audio.duration;
 });
@@ -164,10 +167,12 @@ progress.addEventListener("input", () => {
 
 volume.addEventListener("input", () => {
   audio.volume = Number(volume.value);
+  volume.style.setProperty("--volume", `${Number(volume.value) * 100}%`);
 });
 
 audio.volume = INITIAL_VOLUME;
 volume.value = String(INITIAL_VOLUME);
+volume.style.setProperty("--volume", `${Number(volume.value) * 100}%`);
 
 /* la languette/onglet */
 

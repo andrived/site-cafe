@@ -30,7 +30,7 @@
   border: 0;
   border-radius: 10px 0 0 10px;
 
-  background: #2E6F40;
+  background: #FFA800;
   color: white;
 
   cursor: pointer;
@@ -45,7 +45,7 @@
 }
 
 .player-tab:hover {
-  background: #0F4D0F;
+  background: #FFB27F;
 }
 
 /* apparence du lecteur */
@@ -140,8 +140,8 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: #2E6F40;
-  color: white;
+  background: #FFA800;
+  color: rgb(255, 255, 255);
   font-size: 13px;
 }
 
@@ -165,8 +165,37 @@
 #progress {
   flex: 1;
   min-width: 0;
-  accent-color: #2E6F40;
+  height: 6px;
+  appearance: none;
+  -webkit-appearance: none;
+  background: linear-gradient(
+    to right,
+    #FFA800 0%,
+    #FFA800 var(--progress, 0%),
+    white var(--progress, 0%),
+    white 100%
+  );
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 999px;
   cursor: pointer;
+}
+
+#progress::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  background: #FFA800;
+}
+
+#progress::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  background: #FFA800;
 }
 
 /* (bis) lignes volume, boutons et progression */
@@ -185,8 +214,37 @@
 
 #volume {
   width: 65px;
-  accent-color: #2E6F40;
+  height: 6px;
+  appearance: none;
+  -webkit-appearance: none;
+  background: linear-gradient(
+    to right,
+    #FFA800 0%,
+    #FFA800 var(--volume, 0%),
+    white var(--volume, 0%),
+    white 100%
+  );
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 999px;
   cursor: pointer;
+}
+
+#volume::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  background: #FFA800;
+}
+
+#volume::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  background: #FFA800;
 }
 
 .track-counter {

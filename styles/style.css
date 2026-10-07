@@ -15,7 +15,9 @@ h1, h2, h3, h4, h5 {
 }
 
 .header_0 {
+    display: block;
     font-size: 86px;
+    margin-bottom: 40px;
 }
 
 .header_1 {
@@ -43,6 +45,8 @@ h1, h2, h3, h4, h5 {
     margin: auto;
     overflow: hidden;
 }
+
+
 
 
 /* hero */
@@ -158,6 +162,21 @@ nav ul li a:hover {
     border: transparent;
 }
 
+/* Trait de séparation  */
+.trait-cat {
+    width: 70px;
+    border: none;
+    border-top: 6px solid #b8875c;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* devise */
+
+.devise {
+    display: block;
+    margin-bottom: 50px;
+}
 
 /* sections cafés */
 .location_section {
@@ -195,11 +214,22 @@ nav ul li a:hover {
     border-radius: 10px;
     display: block;
     margin-bottom: 20px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.8s ease, box-shadow 0.3s ease;
 }
 .location img:hover {
     transform: scale(1.05);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* nom des cafés */
+
+.n_cafe {
+    color: #cca786;
+    font-family: Bricolage Grotesque;
+}
+.n_cafe_font {
+    font-family: Bricolage Grotesque;
 }
 
 /* footer */

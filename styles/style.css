@@ -233,9 +233,84 @@ nav ul li a:hover {
     font-family: Bricolage Grotesque;
 }
 
+/* sections horaires */
+.times-list-holder {
+    width: 100%;
+    padding: 0 8%;
+}
+
+.times-list-holder table {
+    width: auto;
+    margin: 0 auto;
+    border-spacing: 5cm 0;
+}
+
+.times-list-holder th {
+    padding: 8px 0;
+    text-align: left;
+    font-weight: bold;
+    font-family: Bricolage Grotesque;
+}
+
+.times-list-holder td {
+    width: 80%;
+    padding: 8px 0;
+    text-align: right;
+}
+
+
+table {
+    display: table;
+    box-sizing: border-box;
+    border-collapse: separate;
+    text-indent: initial;
+    unicode-bidi: isolate;
+    border-spacing: 2px;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+    unicode-bidi: isolate;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+}
+
+.brand-color {
+    color: #cca786 !important;
+    font-weight: bold;
+    font-family: Bricolage Grotesque;
+}
+
 /* footer */
 footer {
     text-align: center;
     padding: 10px;
     background-color: #f1ebe0;
+}
+
+@media (max-width: 600px) {
+    .times-list-holder {
+        padding: 0 16px;
+    }
 }

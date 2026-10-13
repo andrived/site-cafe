@@ -3,13 +3,11 @@ todolist askip:
     moji: ✅, ❌ et 🔄 (status d'avancement)
     ❌ rajoute: quand on clique sur l’emoji ‘🔊’, le son ce mute avec emoji ‘🔇’ et quand on réappuie, il se remet à l’ancien % du son et remet emoji '🔊'.
     ✅ animes les images en faisant un effet de zoom quand le curseur est dessus. + rajoute un ptit fond noir pour que ça fasse 3D
-    ❌ quand le curseur se met sur le côté d'une image, met une sorte de description rapide du café
-    ❌ améliorer le footer
+    ✅ améliorer le footer
     ✅ mettre une d.a de couleur sur le site
-    ❌ finir la description de 'nos classiques'
-    🔄 faire des horaires
-    ❌ faire un 'nous contacter' (mettre dans le footer)
-    ❌ enleve les desc, quand tu cliques sur une image, l'image se grise et se retourne est derrière y'a un texte de description du produit (mettre anime  soit droite/bas)
+    ❌ finir la description de 'au menu'
+    ✅ faire des horaires
+    ✅ faire un 'nous contacter' (mettre dans le footer)
     ❌ embelli 'l'adresse' du café
 
 
